@@ -1,0 +1,1050 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FFFDE0">
+
+  <title>Granja Campos Dourados | Ovos Caipiras de Qualidade</title>
+  <meta name="description" content="Ovos caipiras de qualidade em Itaporanga. Atendimento residencial e comercial.">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            farm: {
+              yellow: '#FCE037',
+              cream: '#FFFDE0',
+              brown: '#4A2511',
+              green: '#235D1B',
+              red: '#E32626'
+            }
+          },
+          fontFamily: {
+            sans: ['DM Sans', 'sans-serif'],
+            display: ['Playfair Display', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Ícones -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- CSS próprio -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- CABEÇALHO -->
+
+<header class="header sticky top-0 z-50">
+
+  <div class="max-w-7xl mx-auto px-4 lg:px-8">
+
+    <div class="h-[82px] flex items-center justify-between gap-4">
+
+      <a href="#inicio" onclick="showTab('inicio'); return false;"
+         class="flex items-center gap-3 min-w-0">
+
+        <div class="logo-container">
+          <img src="assets/logo.png"
+               alt="Logo original Granja Campos Dourados">
+        </div>
+
+        <div class="min-w-0">
+          <h1 class="display-font text-base sm:text-xl font-bold leading-tight">
+            Granja Campos
+            <span class="text-farm-green">Dourados</span>
+          </h1>
+
+          <p class="text-[9px] sm:text-[10px] uppercase tracking-[2px] font-semibold opacity-70">
+            Ovos Caipiras de Qualidade
+          </p>
+        </div>
+
+      </a>
+
+      <!-- MENU DESKTOP -->
+
+      <nav class="hidden lg:flex items-center gap-2">
+
+        <button class="nav-tab active" data-tab="inicio"
+                onclick="showTab('inicio')">
+          Início
+        </button>
+
+        <button class="nav-tab" data-tab="produtos"
+                onclick="showTab('produtos')">
+          Produtos
+        </button>
+
+        <button class="nav-tab" data-tab="galeria"
+                onclick="showTab('galeria')">
+          Galeria
+        </button>
+
+        <button class="nav-tab" data-tab="faq"
+                onclick="showTab('faq')">
+          Dúvidas
+        </button>
+
+      </nav>
+
+      <button onclick="whatsapp('geral')"
+              class="hidden sm:flex items-center gap-2 bg-farm-green hover:bg-green-900 text-white rounded-full px-5 py-3 text-sm font-bold transition">
+
+        <i data-lucide="message-circle" class="w-4 h-4"></i>
+        Fale conosco
+
+      </button>
+
+      <!-- MENU MOBILE -->
+
+      <button id="menu-button"
+              onclick="toggleMobileMenu()"
+              class="lg:hidden p-2"
+              aria-label="Abrir menu"
+              aria-expanded="false">
+
+        <i data-lucide="menu" class="w-7 h-7"></i>
+
+      </button>
+
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu closed lg:hidden">
+
+    <nav class="p-5 flex flex-col gap-2">
+
+      <button class="nav-tab active text-left"
+              data-tab="inicio"
+              onclick="mobileNavigate('inicio')">
+        Início
+      </button>
+
+      <button class="nav-tab text-left"
+              data-tab="produtos"
+              onclick="mobileNavigate('produtos')">
+        Produtos
+      </button>
+
+      <button class="nav-tab text-left"
+              data-tab="galeria"
+              onclick="mobileNavigate('galeria')">
+        Galeria
+      </button>
+
+      <button class="nav-tab text-left"
+              data-tab="faq"
+              onclick="mobileNavigate('faq')">
+        Dúvidas frequentes
+      </button>
+
+      <button onclick="whatsapp('geral')"
+              class="bg-farm-green text-white rounded-xl p-4 mt-3 font-bold">
+
+        <i data-lucide="message-circle" class="inline w-4 h-4 mr-2"></i>
+        Atendimento pelo WhatsApp
+
+      </button>
+
+    </nav>
+  </div>
+
+</header>
+
+
+<main>
+
+<!-- =================================
+     ABA INÍCIO
+================================= -->
+
+<section id="tab-inicio" class="tab-panel active">
+
+  <div class="hero min-h-[590px] lg:min-h-[650px] flex items-center">
+
+    <div class="max-w-7xl mx-auto w-full px-6 lg:px-10 py-20">
+
+      <div class="max-w-2xl text-white">
+
+        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/30 rounded-full px-4 py-2 mb-7">
+
+          <span class="text-farm-yellow">✦</span>
+          <span class="text-xs uppercase tracking-[2px] font-bold">
+            Itaporanga e região
+          </span>
+
+        </div>
+
+        <h2 class="display-font text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
+
+          O frescor da granja,
+          <span class="text-farm-yellow">direto para você.</span>
+
+        </h2>
+
+        <p class="text-white/85 text-base sm:text-lg leading-relaxed mt-7 max-w-xl">
+
+          Ovos caipiras de qualidade, cuidado e procedência.
+          Uma escolha especial para sua casa e para o seu negócio.
+
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 mt-9">
+
+          <button onclick="whatsapp('varejo')"
+                  class="btn-primary rounded-full px-8 py-4 font-bold">
+
+            <i data-lucide="shopping-basket" class="inline w-5 h-5 mr-2"></i>
+            Comprar para minha casa
+
+          </button>
+
+          <button onclick="whatsapp('atacado')"
+                  class="border-2 border-white text-white hover:bg-white hover:text-farm-brown rounded-full px-8 py-4 font-bold transition">
+
+            <i data-lucide="store" class="inline w-5 h-5 mr-2"></i>
+            Comprar para meu negócio
+
+          </button>
+
+        </div>
+
+        <div class="flex flex-wrap gap-6 mt-12 text-sm text-white/90">
+          <span>✓ Qualidade</span>
+          <span>✓ Procedência</span>
+          <span>✓ Inspeção municipal</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- BENEFÍCIOS -->
+
+  <div class="bg-farm-yellow py-8">
+
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-7 text-center">
+
+      <div>
+        <i data-lucide="egg" class="w-8 h-8 mx-auto mb-2"></i>
+        <p class="font-bold text-sm">Ovos de qualidade</p>
+      </div>
+
+      <div>
+        <i data-lucide="shield-check" class="w-8 h-8 mx-auto mb-2"></i>
+        <p class="font-bold text-sm">Inspeção SIM</p>
+      </div>
+
+      <div>
+        <i data-lucide="house" class="w-8 h-8 mx-auto mb-2"></i>
+        <p class="font-bold text-sm">Atendimento residencial</p>
+      </div>
+
+      <div>
+        <i data-lucide="store" class="w-8 h-8 mx-auto mb-2"></i>
+        <p class="font-bold text-sm">Atendimento comercial</p>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- SELO SIM -->
+
+  <section class="py-20 px-6">
+
+    <div class="max-w-6xl mx-auto">
+
+      <div class="sim-card rounded-[28px] p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 shadow-xl">
+
+        <div class="sim-seal">
+
+          <span class="text-xs tracking-[3px] font-bold text-farm-yellow">
+            INSPEÇÃO
+          </span>
+
+          <strong class="display-font text-6xl">SIM</strong>
+
+          <span class="text-xs font-bold">ITAPORANGA</span>
+
+        </div>
+
+        <div class="text-center md:text-left">
+
+          <span class="text-farm-yellow text-xs font-bold uppercase tracking-[3px]">
+            Nosso compromisso
+          </span>
+
+          <h2 class="display-font text-3xl md:text-4xl font-bold mt-3">
+            Qualidade e procedência em primeiro lugar.
+          </h2>
+
+          <p class="text-white/80 leading-relaxed mt-5 max-w-2xl">
+
+            A Granja Campos Dourados possui o selo SIM
+            (Serviço de Inspeção Municipal de Itaporanga),
+            demonstrando seu compromisso com as exigências
+            sanitárias e a segurança dos produtos.
+
+          </p>
+
+          <div class="mt-6 inline-flex items-center gap-2 text-farm-yellow font-bold text-sm">
+
+            <i data-lucide="check-circle" class="w-5 h-5"></i>
+            Serviço de Inspeção Municipal
+
+          </div>
+
+          <p class="text-xs text-white/50 mt-4">
+            Inserir a arte oficial do selo autorizado para uso institucional.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- APRESENTAÇÃO -->
+
+  <section class="pb-20 px-6">
+
+    <div class="max-w-5xl mx-auto text-center">
+
+      <span class="text-xs font-bold uppercase tracking-[3px] text-farm-green">
+        Granja Campos Dourados
+      </span>
+
+      <h2 class="display-font text-4xl md:text-5xl font-bold mt-4">
+        Tradição e qualidade em cada detalhe.
+      </h2>
+
+      <p class="text-farm-brown/70 max-w-2xl mx-auto mt-6 leading-relaxed">
+
+        Nosso objetivo é oferecer produtos de qualidade
+        para consumidores e comerciantes de Itaporanga
+        e região, com atendimento próximo e transparente.
+
+      </p>
+
+      <button onclick="showTab('produtos')"
+              class="btn-secondary rounded-full px-8 py-4 mt-8 font-bold">
+
+        Conheça nossos produtos
+        <i data-lucide="arrow-right" class="inline w-4 h-4 ml-2"></i>
+
+      </button>
+
+    </div>
+  </section>
+
+</section>
+
+
+<!-- =================================
+     ABA PRODUTOS
+================================= -->
+
+<section id="tab-produtos" class="tab-panel">
+
+  <div class="py-16 md:py-20 px-6">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-14">
+
+        <span class="text-xs uppercase tracking-[3px] font-bold text-farm-green">
+          Nosso catálogo
+        </span>
+
+        <h2 class="display-font text-4xl md:text-5xl font-bold mt-4">
+          Nossos produtos
+        </h2>
+
+        <p class="text-farm-brown/65 mt-5 max-w-xl mx-auto">
+          Conheça nossas opções e consulte a disponibilidade diretamente com nossa equipe.
+        </p>
+
+      </div>
+
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- PRODUTO 1 -->
+
+        <article class="product-card bg-white rounded-3xl overflow-hidden border border-farm-brown/10">
+
+          <div class="product-image h-64">
+            <img src="https://images.unsplash.com/photo-1506976785307-8732e854ad03?auto=format&fit=crop&w=900&q=85"
+                 alt="Ovos frescos"
+                 loading="lazy">
+          </div>
+
+          <div class="p-7">
+
+            <span class="product-tag">Qualidade e frescor</span>
+
+            <h3 class="display-font text-2xl font-bold mt-3">
+              Ovos frescos
+            </h3>
+
+            <p class="text-sm text-farm-brown/65 leading-relaxed mt-3">
+              Uma opção versátil para o cotidiano e para suas receitas favoritas.
+            </p>
+
+            <div class="flex gap-2 mt-5">
+              <span class="product-label">Varejo</span>
+              <span class="product-label">Atacado</span>
+            </div>
+
+            <button onclick="whatsapp('geral')"
+                    class="btn-secondary w-full rounded-xl py-3 mt-6 font-bold">
+              Consultar produto ↗
+            </button>
+
+          </div>
+        </article>
+
+
+        <!-- PRODUTO 2 -->
+
+        <article class="product-card bg-white rounded-3xl overflow-hidden border border-farm-brown/10">
+
+          <div class="product-image h-64">
+            <img src="https://images.unsplash.com/photo-1598965675045-45c5e72c7d05?auto=format&fit=crop&w=900&q=85"
+                 alt="Ovos caipiras"
+                 loading="lazy">
+          </div>
+
+          <div class="p-7">
+
+            <span class="product-tag">Sabor e tradição</span>
+
+            <h3 class="display-font text-2xl font-bold mt-3">
+              Ovos caipiras
+            </h3>
+
+            <p class="text-sm text-farm-brown/65 leading-relaxed mt-3">
+              Produtos para quem aprecia o sabor tradicional e busca variedade.
+            </p>
+
+            <div class="flex gap-2 mt-5">
+              <span class="product-label">Varejo</span>
+              <span class="product-label">Atacado</span>
+            </div>
+
+            <button onclick="whatsapp('geral')"
+                    class="btn-secondary w-full rounded-xl py-3 mt-6 font-bold">
+              Consultar produto ↗
+            </button>
+
+          </div>
+        </article>
+
+
+        <!-- PRODUTO 3 -->
+
+        <article class="product-card bg-white rounded-3xl overflow-hidden border border-farm-brown/10">
+
+          <div class="product-image h-64">
+            <img src="https://images.unsplash.com/photo-1543168256-418811576931?auto=format&fit=crop&w=900&q=85"
+                 alt="Fornecimento comercial"
+                 loading="lazy">
+          </div>
+
+          <div class="p-7">
+
+            <span class="product-tag">Atendimento comercial</span>
+
+            <h3 class="display-font text-2xl font-bold mt-3">
+              Fornecimento em volume
+            </h3>
+
+            <p class="text-sm text-farm-brown/65 leading-relaxed mt-3">
+              Atendimento para estabelecimentos que buscam fornecimento comercial.
+            </p>
+
+            <div class="flex gap-2 mt-5">
+              <span class="product-label">Atacado</span>
+              <span class="product-label">Comercial</span>
+            </div>
+
+            <button onclick="whatsapp('atacado')"
+                    class="btn-secondary w-full rounded-xl py-3 mt-6 font-bold">
+              Solicitar orçamento ↗
+            </button>
+
+          </div>
+        </article>
+
+      </div>
+
+      <p class="text-center text-xs text-farm-brown/50 mt-8">
+        Imagens ilustrativas. Produtos, embalagens e disponibilidade sujeitos à confirmação.
+      </p>
+
+    </div>
+  </div>
+
+
+  <!-- VAREJO E ATACADO -->
+
+  <section class="bg-farm-yellow py-20 px-6">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-12">
+
+        <span class="text-xs uppercase tracking-[3px] font-bold">
+          Nosso atendimento
+        </span>
+
+        <h2 class="display-font text-4xl font-bold mt-4">
+          Para sua casa ou seu negócio.
+        </h2>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <div class="bg-farm-cream p-9 md:p-11 rounded-3xl">
+
+          <div class="w-14 h-14 bg-farm-yellow rounded-2xl flex items-center justify-center mb-6">
+            <i data-lucide="house" class="w-7 h-7"></i>
+          </div>
+
+          <h3 class="display-font text-3xl font-bold">
+            Para sua casa
+          </h3>
+
+          <p class="text-farm-brown/70 mt-5 leading-relaxed">
+            Produtos para o consumo familiar, com atendimento próximo e informações sobre disponibilidade.
+          </p>
+
+          <ul class="space-y-3 mt-7 text-sm">
+            <li>✓ Pedidos residenciais</li>
+            <li>✓ Atendimento individualizado</li>
+            <li>✓ Consulta de disponibilidade</li>
+            <li>✓ Informações sobre entregas</li>
+          </ul>
+
+          <button onclick="whatsapp('varejo')"
+                  class="btn-secondary w-full rounded-full py-4 mt-8 font-bold">
+            Atendimento residencial ↗
+          </button>
+
+        </div>
+
+
+        <div class="bg-farm-brown text-white p-9 md:p-11 rounded-3xl">
+
+          <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+            <i data-lucide="store" class="w-7 h-7 text-farm-yellow"></i>
+          </div>
+
+          <h3 class="display-font text-3xl font-bold">
+            Para seu negócio
+          </h3>
+
+          <p class="text-white/70 mt-5 leading-relaxed">
+            Atendimento comercial para mercados, padarias, restaurantes e outros estabelecimentos.
+          </p>
+
+          <ul class="space-y-3 mt-7 text-sm text-white/90">
+            <li>✓ Mercados</li>
+            <li>✓ Padarias</li>
+            <li>✓ Restaurantes</li>
+            <li>✓ Consulta de fornecimento</li>
+          </ul>
+
+          <button onclick="whatsapp('atacado')"
+                  class="btn-primary w-full rounded-full py-4 mt-8 font-bold">
+            Atendimento comercial ↗
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</section>
+
+
+<!-- =================================
+     ABA GALERIA
+================================= -->
+
+<section id="tab-galeria" class="tab-panel">
+
+  <div class="py-16 md:py-20 px-6">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="flex flex-col md:flex-row justify-between md:items-end gap-6 mb-12">
+
+        <div>
+
+          <span class="text-xs font-bold uppercase tracking-[3px] text-farm-green">
+            Conheça nosso trabalho
+          </span>
+
+          <h2 class="display-font text-4xl md:text-5xl font-bold mt-4">
+            Nossa galeria
+          </h2>
+
+          <p class="text-farm-brown/60 mt-4 max-w-xl">
+            Um espaço para compartilhar registros da granja, dos produtos e do nosso dia a dia.
+          </p>
+
+        </div>
+
+        <a href="https://www.instagram.com/granja.camposdourados/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="font-bold text-farm-green border-b-2 border-farm-yellow pb-2 w-fit">
+          @granja.camposdourados ↗
+        </a>
+
+      </div>
+
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+
+        <div class="gallery-card aspect-square">
+          <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=700&q=80"
+               alt="Ambiente de granja" loading="lazy">
+          <div class="gallery-overlay">Ambiente rural</div>
+        </div>
+
+        <div class="gallery-card aspect-square">
+          <img src="https://images.unsplash.com/photo-1506976785307-8732e854ad03?auto=format&fit=crop&w=700&q=80"
+               alt="Ovos" loading="lazy">
+          <div class="gallery-overlay">Nossos produtos</div>
+        </div>
+
+        <div class="gallery-card aspect-square">
+          <img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=700&q=80"
+               alt="Produção rural" loading="lazy">
+          <div class="gallery-overlay">Natureza</div>
+        </div>
+
+        <div class="gallery-card aspect-square">
+          <img src="https://images.unsplash.com/photo-1493962853295-0fd70327578a?auto=format&fit=crop&w=700&q=80"
+               alt="Paisagem rural" loading="lazy">
+          <div class="gallery-overlay">Nosso espaço</div>
+        </div>
+
+        <div class="gallery-card aspect-square">
+          <img src="https://images.unsplash.com/photo-1598965675045-45c5e72c7d05?auto=format&fit=crop&w=700&q=80"
+               alt="Ovos selecionados" loading="lazy">
+          <div class="gallery-overlay">Qualidade</div>
+        </div>
+
+        <div class="gallery-card aspect-square">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=700&q=80"
+               alt="Campo" loading="lazy">
+          <div class="gallery-overlay">Campo e tradição</div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-12">
+
+        <a href="https://www.instagram.com/granja.camposdourados/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="inline-flex items-center gap-3 btn-secondary px-9 py-4 rounded-full font-bold">
+
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+          Visitar nosso Instagram
+
+        </a>
+
+      </div>
+
+      <p class="text-center text-xs text-farm-brown/50 mt-8">
+        Fotografias ilustrativas. Esta galeria poderá receber fotografias oficiais da granja posteriormente.
+      </p>
+
+    </div>
+  </div>
+
+</section>
+
+
+<!-- =================================
+     ABA DÚVIDAS
+================================= -->
+
+<section id="tab-faq" class="tab-panel">
+
+  <div class="py-16 md:py-24 px-6">
+
+    <div class="max-w-3xl mx-auto">
+
+      <div class="text-center mb-14">
+
+        <span class="text-xs uppercase tracking-[3px] font-bold text-farm-green">
+          Atendimento
+        </span>
+
+        <h2 class="display-font text-4xl md:text-5xl font-bold mt-4">
+          Perguntas frequentes
+        </h2>
+
+        <p class="text-farm-brown/60 mt-5">
+          Reunimos algumas dúvidas comuns. As informações comerciais serão atualizadas posteriormente.
+        </p>
+
+      </div>
+
+
+      <div class="space-y-4">
+
+        <div class="faq-item bg-white rounded-2xl border border-farm-brown/10 overflow-hidden">
+
+          <button onclick="toggleFAQ(this)"
+                  class="faq-question"
+                  aria-expanded="false">
+
+            <span>Quais são os dias e horários de entrega?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              Informações sobre dias, horários e condições de entrega serão colocadas aqui posteriormente.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item bg-white rounded-2xl border border-farm-brown/10 overflow-hidden">
+
+          <button onclick="toggleFAQ(this)"
+                  class="faq-question"
+                  aria-expanded="false">
+
+            <span>Existe pedido mínimo para o atacado?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              As quantidades mínimas e condições comerciais serão colocadas aqui posteriormente.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item bg-white rounded-2xl border border-farm-brown/10 overflow-hidden">
+
+          <button onclick="toggleFAQ(this)"
+                  class="faq-question"
+                  aria-expanded="false">
+
+            <span>Quais formas de pagamento são aceitas?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              As formas de pagamento disponíveis serão informadas aqui posteriormente.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item bg-white rounded-2xl border border-farm-brown/10 overflow-hidden">
+
+          <button onclick="toggleFAQ(this)"
+                  class="faq-question"
+                  aria-expanded="false">
+
+            <span>Quais regiões são atendidas?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              A área de atendimento e as localidades disponíveis serão informadas aqui posteriormente.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item bg-white rounded-2xl border border-farm-brown/10 overflow-hidden">
+
+          <button onclick="toggleFAQ(this)"
+                  class="faq-question"
+                  aria-expanded="false">
+
+            <span>Como posso realizar um pedido?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              Você pode entrar em contato pelo WhatsApp da Granja Campos Dourados para receber informações sobre os produtos.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item bg-white rounded-2xl border border-farm-brown/10 overflow-hidden">
+
+          <button onclick="toggleFAQ(this)"
+                  class="faq-question"
+                  aria-expanded="false">
+
+            <span>A granja atende estabelecimentos comerciais?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              Sim. O atendimento contempla mercados, padarias, restaurantes e outros estabelecimentos comerciais. Consulte as condições pelo WhatsApp.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="bg-farm-yellow rounded-3xl p-8 text-center mt-12">
+
+        <h3 class="display-font text-2xl font-bold">
+          Ainda tem alguma dúvida?
+        </h3>
+
+        <p class="text-sm mt-3">
+          Nossa equipe está disponível para conversar com você.
+        </p>
+
+        <button onclick="whatsapp('geral')"
+                class="btn-secondary rounded-full px-8 py-4 mt-6 font-bold">
+          Falar pelo WhatsApp ↗
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- =================================
+     RODAPÉ
+================================= -->
+
+<footer class="bg-farm-brown text-white pt-14 pb-7">
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
+
+      <!-- IDENTIDADE -->
+
+      <div>
+
+        <div class="flex items-center gap-3 mb-5">
+
+          <div class="logo-container footer-logo">
+            <img src="assets/logo.png"
+                 alt="Logo original Granja Campos Dourados">
+          </div>
+
+          <div>
+            <h3 class="display-font font-bold text-lg">
+              Granja Campos
+              <span class="text-farm-yellow">Dourados</span>
+            </h3>
+
+            <p class="text-[9px] tracking-[2px] uppercase text-white/60">
+              Ovos Caipiras de Qualidade
+            </p>
+          </div>
+
+        </div>
+
+        <p class="text-sm text-white/60 leading-relaxed">
+          Qualidade, tradição e procedência para sua casa e seu negócio.
+        </p>
+
+      </div>
+
+
+      <!-- NAVEGAÇÃO -->
+
+      <div>
+
+        <h4 class="font-bold text-farm-yellow mb-5">
+          Navegação
+        </h4>
+
+        <ul class="space-y-3 text-sm text-white/70">
+
+          <li><button onclick="showTab('inicio')" class="footer-link">Início</button></li>
+          <li><button onclick="showTab('produtos')" class="footer-link">Produtos</button></li>
+          <li><button onclick="showTab('galeria')" class="footer-link">Galeria</button></li>
+          <li><button onclick="showTab('faq')" class="footer-link">Dúvidas</button></li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- CONTATO -->
+
+      <div>
+
+        <h4 class="font-bold text-farm-yellow mb-5">
+          Contato
+        </h4>
+
+        <ul class="space-y-4 text-sm text-white/70">
+
+          <li class="flex gap-3 items-start">
+
+            <i data-lucide="mail" class="w-5 h-5 text-farm-yellow flex-shrink-0"></i>
+
+            <div>
+              <a href="mailto:contato.granjacamposdourados@gmail.com"
+                 class="footer-link break-all">
+                contato.granjacamposdourados@gmail.com
+              </a>
+
+              <p class="text-xs text-white/40 mt-1">
+                (e-mail comercial)
+              </p>
+            </div>
+
+          </li>
+
+          <li class="flex gap-3 items-center">
+
+            <i data-lucide="phone" class="w-5 h-5 text-farm-yellow"></i>
+
+            <a href="https://wa.me/5515996149019"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="footer-link">
+              (15) 99614-9019
+            </a>
+
+          </li>
+
+          <li class="flex gap-3 items-center">
+
+            <i data-lucide="instagram" class="w-5 h-5 text-farm-yellow"></i>
+
+            <a href="https://www.instagram.com/granja.camposdourados/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="footer-link">
+              Instagram
+            </a>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- LOCALIZAÇÃO -->
+
+      <div>
+
+        <h4 class="font-bold text-farm-yellow mb-5">
+          Nossa região
+        </h4>
+
+        <p class="text-sm text-white/70 leading-relaxed">
+
+          <i data-lucide="map-pin" class="inline w-4 h-4 text-farm-yellow mr-1"></i>
+
+          Itaporanga – São Paulo
+
+        </p>
+
+        <p class="text-sm text-white/50 mt-3 leading-relaxed">
+          Consulte nossa equipe sobre as localidades atendidas.
+        </p>
+
+        <button onclick="whatsapp('geral')"
+                class="mt-6 border border-farm-yellow text-farm-yellow hover:bg-farm-yellow hover:text-farm-brown rounded-full px-5 py-3 text-sm font-bold transition">
+          Entre em contato ↗
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="border-t border-white/15 pt-7 flex flex-col sm:flex-row justify-between gap-4 text-xs text-white/40">
+
+      <p>
+        © <span id="year"></span> Granja Campos Dourados. Todos os direitos reservados.
+      </p>
+
+      <p>Ovos Caipiras de Qualidade.</p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- WHATSAPP FLUTUANTE -->
+
+<button onclick="whatsapp('geral')"
+        aria-label="Conversar pelo WhatsApp"
+        title="Fale conosco"
+        class="whatsapp-float fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-[#25D366] hover:bg-[#1ebe5d] text-white flex items-center justify-center transition hover:scale-110">
+
+  <i data-lucide="message-circle" class="w-9 h-9"></i>
+
+</button>
+
+
+<!-- JAVASCRIPT EXTERNO -->
+
+<script src="script.js" defer></script>
+
+</body>
+</html>
